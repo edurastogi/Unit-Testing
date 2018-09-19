@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -81,5 +82,40 @@ public class ListMockTest {
 
         assertEquals("SomeString1", allValues.get(0));
         assertEquals("SomeString2", allValues.get(1));
+    }
+
+    @Test
+    public void mocking(){
+        ArrayList arrayListMock = mock(ArrayList.class);
+        System.out.println(arrayListMock.get(0));//null
+        System.out.println(arrayListMock.size());//0
+        arrayListMock.add("Test");
+        arrayListMock.add("Test2");
+        System.out.println(arrayListMock.size());//0
+        when(arrayListMock.size()).thenReturn(5);
+        System.out.println(arrayListMock.size());
+
+        // A mock does not retain behavior (code) of the original class
+        // A spy, by default, retains behavior (code) of the original class !
+
+    }
+
+    @Test
+    public void spying(){
+        // You can stub (override) and verify specific behavior (methods) on a Spy!
+        ArrayList arrayListSpy = spy(ArrayList.class);
+        arrayListSpy.add("Test0");
+        System.out.println(arrayListSpy.get(0));//null
+        System.out.println(arrayListSpy.size());//0
+        arrayListSpy.add("Test");
+        arrayListSpy.add("Test2");
+        System.out.println(arrayListSpy.size());//0
+        when(arrayListSpy.size()).thenReturn(5);
+        System.out.println(arrayListSpy.size());
+
+        arrayListSpy.add("Test4");
+        System.out.println(arrayListSpy.size());
+
+        verify(arrayListSpy).add("Test4");
     }
 }
