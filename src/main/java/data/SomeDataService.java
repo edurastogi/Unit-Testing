@@ -1,4 +1,4 @@
-package com.in28minutes.unittesting.unittesting.data;
+package data;
 
 public interface SomeDataService {
 

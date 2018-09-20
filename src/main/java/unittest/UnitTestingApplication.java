@@ -1,4 +1,4 @@
-package com.in28minutes.unittesting.unittesting;
+package unittest;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

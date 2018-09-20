@@ -1,4 +1,4 @@
-package com.in28minutes.unittesting.unittesting.business;
+package business;
 
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;

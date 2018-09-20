@@ -1,6 +1,6 @@
-package com.in28minutes.unittesting.unittesting.business;
+package business;
 
-import com.in28minutes.unittesting.unittesting.data.SomeDataService;
+import data.SomeDataService;
 
 public class SomeBusinessImpl {
 
