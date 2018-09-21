@@ -1,6 +1,6 @@
-package business;
+package unittest.business;
 
-import data.SomeDataService;
+import unittest.data.SomeDataService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -37,11 +37,11 @@ public class SomeBusinessMockTest {
         assertEquals(5, business.calculateSumUsingDataService());
     }
 
-    //SomeBusinessImpl business = new SomeBusinessImpl();
+    //SomeBusinessImpl unittest.business = new SomeBusinessImpl();
     //SomeDataService dataServiceMock = mock(SomeDataService.class);
 
     /*@Before
     public void before() {
-        business.setSomeDataService(dataServiceMock);
+        unittest.business.setSomeDataService(dataServiceMock);
     }*/
 }

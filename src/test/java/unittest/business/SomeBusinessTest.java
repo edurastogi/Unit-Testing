@@ -1,4 +1,4 @@
-package business;
+package unittest.business;
 
 import org.junit.Test;
 

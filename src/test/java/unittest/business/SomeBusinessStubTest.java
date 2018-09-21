@@ -1,6 +1,6 @@
-package business;
+package unittest.business;
 
-import data.SomeDataService;
+import unittest.data.SomeDataService;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;

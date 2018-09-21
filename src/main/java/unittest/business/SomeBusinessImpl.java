@@ -1,6 +1,6 @@
-package business;
+package unittest.business;
 
-import data.SomeDataService;
+import unittest.data.SomeDataService;
 
 public class SomeBusinessImpl {
 

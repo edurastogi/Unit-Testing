@@ -1,4 +1,4 @@
-package spike;
+package unittest.spike;
 
 import org.json.JSONException;
 import org.junit.Test;

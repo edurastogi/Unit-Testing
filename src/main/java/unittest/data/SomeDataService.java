@@ -1,4 +1,4 @@
-package data;
+package unittest.data;
 
 public interface SomeDataService {
 
