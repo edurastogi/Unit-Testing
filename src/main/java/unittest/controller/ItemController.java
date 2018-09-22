@@ -1,10 +1,12 @@
 package unittest.controller;
 
-import unittest.business.ItemBusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import unittest.business.ItemBusinessService;
 import unittest.model.Item;
+
+import java.util.List;
 
 @RestController
 public class ItemController {
@@ -21,5 +23,11 @@ public class ItemController {
     public Item itemFromBusinessService(){
         //return new Item(1,"Ball",10,100);
         return businessService.retreiveHardcodedItem();
+    }
+
+    @GetMapping("/all-items-from-database")
+    public List<Item> retrieveAllItems(){
+        //return new Item(1,"Ball",10,100);
+        return businessService.retrieveAllItems();
     }
 }
