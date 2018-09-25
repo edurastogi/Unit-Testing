@@ -22,7 +22,7 @@ public class ItemController {
     @GetMapping("/item-from-business-service")
     public Item itemFromBusinessService(){
         //return new Item(1,"Ball",10,100);
-        return businessService.retreiveHardcodedItem();
+        return businessService.reteriveHardcodedItem();
     }
 
     @GetMapping("/all-items-from-database")
