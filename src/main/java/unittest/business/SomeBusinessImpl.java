@@ -2,6 +2,8 @@ package unittest.business;
 
 import unittest.data.SomeDataService;
 
+import java.util.Arrays;
+
 public class SomeBusinessImpl {
 
     private SomeDataService someDataService;
@@ -11,19 +13,11 @@ public class SomeBusinessImpl {
     }
 
     public int calculateSum(int[] data){
-        int sum = 0;
-        for(int value:data){
-            sum = sum + value;
-        }
-        return  sum;
+        return Arrays.stream(data).reduce(Integer::sum).orElse(0);
     }
 
     public int calculateSumUsingDataService(){
-        int sum = 0;
         int[] data = someDataService.retrieveAllData();
-        for(int value:data){
-            sum = sum + value;
-        }
-        return  sum;
+        return Arrays.stream(data).reduce(Integer::sum).orElse(0);
     }
 }
