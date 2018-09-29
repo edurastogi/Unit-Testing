@@ -24,15 +24,5 @@ public class AssertJTest {
         assertThat("ABCDE").contains("BCD")
                 .startsWith("ABC")
                 .endsWith("CDE");
-
-
-        /*
-        assertThat("",isEmptyString());
-
-        assertThat("ABCDE",containsString("BCD"));
-
-        assertThat("ABCDE",startsWith("ABC"));
-
-        assertThat("ABCDE",endsWith("CDE"));*/
     }
 }
